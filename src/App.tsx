@@ -7,13 +7,13 @@ function App() {
   const ref = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
-    if (ref && ref.current) setExperience(new Experience(ref.current))
+    if (ref && ref.current) setExperience(Experience.create({ targetedElement: ref.current }))
   }, [ref, experience])
 
   return (
     <div className='App'>
       <div className={'experience'}>
-        <canvas className={'experience-canvas'}  ref={ref}/>
+        <canvas className={'experience-canvas'} ref={ref} />
       </div>
     </div>
   )
