@@ -1,8 +1,8 @@
-import { Scene } from "three";
+import {Scene} from "three";
 import Renderer from "./Renderer";
 import Config from "./types/Config";
-import { Options } from "./types/options";
-import { Pane } from 'tweakpane'
+import {Options} from "./types/options";
+import {Pane} from 'tweakpane'
 import Sizes from "./utils/Sizes";
 import Time from "./utils/Time";
 import Stats from './utils/Stats'
@@ -50,17 +50,43 @@ export default class Experience {
     this.update()
   }
 
-  public static create(options: Options) {
-    if (Experience.instance) return Experience.Instance
-    else new Experience(options);
-  }
-
   public static get Instance() {
     if (Experience.instance) return Experience.instance;
     else throw Error;
   }
 
-  public destroy() { }
+  public static create(options: Options) {
+    if (Experience.instance) return Experience.Instance
+    else new Experience(options);
+  }
+
+  public destroy() {
+    throw new Error("Method not implemented.");
+  }
+
+  public resize() {
+    const boundings = this.canvas.getBoundingClientRect()
+    this.config.width = boundings.width
+    this.config.height = boundings.height
+    this.config.smallestSide = Math.min(this.config.width, this.config.height)
+    this.config.largestSide = Math.max(this.config.width, this.config.height)
+    this.config.pixelRatio = Math.min(Math.max(window.devicePixelRatio, 1), 2)
+
+    if (this.camera) this.camera.resize()
+    if (this.renderer) this.renderer.resize()
+    if (this.world) this.world.resize()
+  }
+
+  public update() {
+    if (this.stats) this.stats.update()
+    this.camera.update()
+    if (this.renderer) this.renderer.update()
+    if (this.world) this.world.update()
+    if (this.navigation) this.navigation.update()
+    window.requestAnimationFrame(() => {
+      this.update()
+    })
+  }
 
   private createConfig(): Config {
     const pixelRatio = Math.min(Math.max(window.devicePixelRatio, 1), 2)
@@ -90,29 +116,5 @@ export default class Experience {
       this.debug = new Pane()
       this.debug.element.style.width = '320px'
     }
-  }
-
-  private resize() {
-    const boundings = this.canvas.getBoundingClientRect()
-    this.config.width = boundings.width
-    this.config.height = boundings.height
-    this.config.smallestSide = Math.min(this.config.width, this.config.height)
-    this.config.largestSide = Math.max(this.config.width, this.config.height)
-    this.config.pixelRatio = Math.min(Math.max(window.devicePixelRatio, 1), 2)
-
-    if (this.camera) this.camera.resize()
-    if (this.renderer) this.renderer.resize()
-    if (this.world) this.world.resize()
-  }
-
-  private update() {
-    if (this.stats) this.stats.update()
-    this.camera.update()
-    if (this.renderer) this.renderer.update()
-    if (this.world) this.world.update()
-    if (this.navigation) this.navigation.update()
-    window.requestAnimationFrame(() => {
-      this.update()
-    })
   }
 }

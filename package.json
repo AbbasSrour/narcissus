@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@types/stats.js": "^0.17.0",
+    "@types/normalize-wheel": "^1.0.0",
     "events": "^3.3.0",
     "gsap": "^3.11.3",
     "normalize-wheel": "^1.0.1",
@@ -23,6 +23,7 @@
     "@types/events": "^3.0.0",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "@types/stats.js": "^0.17.0",
     "@types/three": "^0.144.0",
     "@vitejs/plugin-react": "^2.1.0",
     "prettier": "^2.7.1",

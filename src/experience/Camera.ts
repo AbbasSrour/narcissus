@@ -1,8 +1,8 @@
 import * as three from 'three';
+import {PerspectiveCamera} from 'three';
 import Experience from './Experience';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js'
 import Config from './types/Config';
-import { PerspectiveCamera } from 'three';
 
 enum Mode {
   default = "default",
@@ -12,12 +12,13 @@ enum Mode {
 
 export default class Camera {
   public instance: PerspectiveCamera;
-  private experience: Experience;
   private mode: Mode;
   private modes: {
     default: { [key: string]: any }
     debug: { [key: string]: any }
   }
+
+  private experience: Experience;
   private scene: three.Scene;
   private config: Config;
   private canvas: HTMLCanvasElement;
@@ -28,7 +29,7 @@ export default class Camera {
     this.scene = this.experience.scene;
     this.config = this.experience.config;
     this.mode = Mode.default;
-    this.modes = { default: {}, debug: {} }
+    this.modes = {default: {}, debug: {}}
     this.instance = this.createPerspectiveCamera();
     this.setModes()
   }
@@ -50,7 +51,7 @@ export default class Camera {
     this.modes.debug = {};
     this.modes.debug.instance = this.instance.clone();
     this.modes.debug.instance.rotation.reorder('YXZ');
-    this.modes.debug.instance.position.set(- 15, 15, 15);
+    this.modes.debug.instance.position.set(-15, 15, 15);
 
     this.modes.debug.orbitControls = new OrbitControls(this.modes.debug.instance, this.canvas)
     this.modes.debug.orbitControls.enabled = false

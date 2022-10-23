@@ -1,11 +1,11 @@
-import { EventEmitter } from "events";
-import { BufferGeometry, CompressedTexture, DataTexture, Group } from "three";
-import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js'
-import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
-import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js'
-import { BasisTextureLoader } from 'three/examples/jsm/loaders/BasisTextureLoader.js'
-import { AssetType } from "../assets";
+import {EventEmitter} from "events";
+import {BufferGeometry, CompressedTexture, DataTexture, Group} from "three";
+import {GLTF, GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
+import {FBXLoader} from 'three/examples/jsm/loaders/FBXLoader.js'
+import {DRACOLoader} from 'three/examples/jsm/loaders/DRACOLoader.js'
+import {RGBELoader} from 'three/examples/jsm/loaders/RGBELoader.js'
+import {BasisTextureLoader} from 'three/examples/jsm/loaders/BasisTextureLoader.js'
+import {AssetType} from "../assets";
 import Experience from "../Experience";
 
 interface Loader {
@@ -46,8 +46,7 @@ export default class Loaders extends EventEmitter {
         const loader = this.loaders.find((loader) => loader.extensions.find((extension) => extension === assetExtension))
         if (loader) loader.action(resource)
         else console.warn(`Cannot found loader for ${resource}`)
-      }
-      else {
+      } else {
         console.warn(`Cannot find extension of ${resource}`)
       }
     }
@@ -81,7 +80,7 @@ export default class Loaders extends EventEmitter {
     // Draco
     const dracoLoader = new DRACOLoader()
     dracoLoader.setDecoderPath('draco/')
-    dracoLoader.setDecoderConfig({ type: 'js' })
+    dracoLoader.setDecoderConfig({type: 'js'})
     this.loaders.push({
       extensions: ['drc'],
       action: (resource: AssetType) => {
@@ -116,11 +115,11 @@ export default class Loaders extends EventEmitter {
     })
 
     // RGBE | HDR
-    const rgbeLoader = new RGBELoader()
+    const rgbaLoader = new RGBELoader()
     this.loaders.push({
       extensions: ['hdr'],
       action: (resource: AssetType) => {
-        rgbeLoader.load(resource.source, (data: DataTexture) => {
+        rgbaLoader.load(resource.source, (data: DataTexture) => {
           this.fileLoadEnd(resource, data)
         })
       }
@@ -131,6 +130,6 @@ export default class Loaders extends EventEmitter {
     this.loaded++;
     this.items[resource.name] = data;
     this.emit('fileEnd', [resource, data]);
-    if (this.loaded === this.queue) this.emit('ready')
+    if (this.loaded === this.queue) this.emit('end')
   }
 }
