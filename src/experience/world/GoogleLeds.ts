@@ -3,7 +3,7 @@ import * as THREE from 'three'
 
 export default class GoogleLeds {
   constructor() {
-    this.experience = new Experience()
+    this.experience = Experience.Instance
     this.resources = this.experience.resources
     this.debug = this.experience.debug
     this.scene = this.experience.scene
@@ -68,7 +68,7 @@ export default class GoogleLeds {
           .addInput(
             item,
             'color',
-            { view: 'color' }
+            {view: 'color'}
           )
           .on('change', () => {
             item.material.color.set(item.color)
