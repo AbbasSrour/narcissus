@@ -1,4 +1,4 @@
-import { EventEmitter } from "events";
+import {EventEmitter} from "events";
 
 export default class Sizes extends EventEmitter {
   private width: number;
@@ -19,7 +19,6 @@ export default class Sizes extends EventEmitter {
   }
 
   private resize() {
-    console.log(this)
     this.width = window.innerWidth;
     this.height = window.innerHeight;
     this.aspect = this.width / this.height

@@ -1,7 +1,16 @@
-import { Scene } from "three";
+import {Scene} from "three";
 import Experience from "./Experience";
 import Resources from "./Resources";
 import Config from "./types/Config";
+
+import Baked from "./world/Baked";
+import CoffeeSteam from "./world/CoffeeSteam";
+import ElgatoLight from "./world/CoffeeSteam";
+import GoogleLeds from "./world/GoogleLeds";
+import LoupedeckButtons from "./world/LoupedeckButton";
+import TopChair from "./world/TopChair";
+import BouncingLogo from "./world/BouncingLogo";
+import Screen from "./world/Screen";
 
 export default class World {
   private experience: Experience;
@@ -20,7 +29,7 @@ export default class World {
         this.setBaked()
         this.setGoogleLeds()
         this.setLoupedeckButtons()
-        this.setCoffeeSteam()
+        // this.setCoffeeSteam()
         this.setTopChair()
         this.setElgatoLight()
         this.setBouncingLogo()
@@ -28,6 +37,14 @@ export default class World {
       }
     })
   }
+
+  destroy() {
+        throw new Error("Method not implemented.");
+    }
+
+  resize() {
+        throw new Error("Method not implemented.");
+    }
 
   setBaked() {
     this.baked = new Baked()
@@ -68,9 +85,6 @@ export default class World {
     )
   }
 
-  resize() {
-  }
-
   update() {
     if (this.googleLeds)
       this.googleLeds.update()
@@ -88,6 +102,4 @@ export default class World {
       this.bouncingLogo.update()
   }
 
-  destroy() {
-  }
 }

@@ -9,7 +9,9 @@ import {AssetType} from "../assets";
 import Experience from "../Experience";
 
 interface Loader {
-  extensions: Array<String>;
+  extensions: Array<string>;
+  //TODO fix
+  // eslint-disable-next-line @typescript-eslint/ban-types
   action: Function;
 }
 
@@ -61,6 +63,10 @@ export default class Loaders extends EventEmitter {
         image.addEventListener('load', () => {
           this.fileLoadEnd(resource, image)
         })
+        image.addEventListener('error', () => {
+          this.fileLoadEnd(resource, image)
+        })
+        image.src = resource.source
       }
     })
 
@@ -115,11 +121,11 @@ export default class Loaders extends EventEmitter {
     })
 
     // RGBE | HDR
-    const rgbaLoader = new RGBELoader()
+    const rgbeLoader = new RGBELoader()
     this.loaders.push({
       extensions: ['hdr'],
       action: (resource: AssetType) => {
-        rgbaLoader.load(resource.source, (data: DataTexture) => {
+        rgbeLoader.load(resource.source, (data: DataTexture) => {
           this.fileLoadEnd(resource, data)
         })
       }
@@ -129,7 +135,7 @@ export default class Loaders extends EventEmitter {
   private fileLoadEnd(resource: AssetType, data: any) {
     this.loaded++;
     this.items[resource.name] = data;
-    this.emit('fileEnd', [resource, data]);
+    this.emit('fileEnd', resource, data);
     if (this.loaded === this.queue) this.emit('end')
   }
 }

@@ -1,6 +1,6 @@
-import { EventEmitter } from "events";
+import {EventEmitter} from "events";
 import * as three from "three"
-import { AssetType } from "./assets";
+import {AssetType} from "./assets";
 import Loaders from './utils/Loaders'
 
 interface Items {
@@ -21,7 +21,7 @@ export default class Resources extends EventEmitter {
   constructor(assets: any) {
     super();
 
-    // Items (will contain every resources)
+    // Items (will contain every resource)
     this.items = {}
 
     // Loader
@@ -44,7 +44,7 @@ export default class Resources extends EventEmitter {
       this.items[resource.name] = data
 
       this.groups.current.loaded++
-      this.emit('progress', [this.groups.current, resource, data])
+      this.emit('progress', this.groups.current, resource, data)
     })
 
     // Loader all end event
@@ -52,12 +52,11 @@ export default class Resources extends EventEmitter {
       this.groups.loaded.push(this.groups.current)
 
       // Trigger
-      this.emit('groupEnd', [this.groups.current])
+      this.emit('groupEnd', this.groups.current)
 
       if (this.groups.assets.length > 0) {
         this.loadNextGroup()
-      }
-      else {
+      } else {
         this.emit('end')
       }
     })

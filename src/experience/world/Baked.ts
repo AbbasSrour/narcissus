@@ -1,12 +1,19 @@
 import Experience from "../Experience"
 import vertexShader from '../shaders/baked/vertex.glsl'
+import fragmentShader from '../shaders/baked/fragment.glsl'
+import * as THREE from 'three'
+import {Scene} from 'three'
+
+import Resources from "../Resources";
+import Time from "../utils/Time";
+import {Pane} from "tweakpane";
 
 export default class Baked {
-  experience: Experience
-  resources: import("/home/ares/Projects/portfolio/portfolio-react/src/experience/Resources").default
-  debug: any
-  scene: any
-  time: import("/home/ares/Projects/portfolio/portfolio-react/src/experience/utils/Time").default
+  private experience: Experience
+  private resources: Resources
+  private debug: Pane | undefined
+  private scene: Scene
+  private time: Time
 
   constructor() {
     this.experience = Experience.Instance
@@ -53,24 +60,24 @@ export default class Baked {
 
     this.model.material = new THREE.ShaderMaterial({
       uniforms:
-      {
-        uBakedDayTexture: { value: this.model.bakedDayTexture },
-        uBakedNightTexture: { value: this.model.bakedNightTexture },
-        uBakedNeutralTexture: { value: this.model.bakedNeutralTexture },
-        uLightMapTexture: { value: this.model.lightMapTexture },
+        {
+          uBakedDayTexture: {value: this.model.bakedDayTexture},
+          uBakedNightTexture: {value: this.model.bakedNightTexture},
+          uBakedNeutralTexture: {value: this.model.bakedNeutralTexture},
+          uLightMapTexture: {value: this.model.lightMapTexture},
 
-        uNightMix: { value: 1 },
-        uNeutralMix: { value: 0 },
+          uNightMix: {value: 1},
+          uNeutralMix: {value: 0},
 
-        uLightTvColor: { value: new THREE.Color(this.colors.tv) },
-        uLightTvStrength: { value: 1.47 },
+          uLightTvColor: {value: new THREE.Color(this.colors.tv)},
+          uLightTvStrength: {value: 1.47},
 
-        uLightDeskColor: { value: new THREE.Color(this.colors.desk) },
-        uLightDeskStrength: { value: 1.9 },
+          uLightDeskColor: {value: new THREE.Color(this.colors.desk)},
+          uLightDeskStrength: {value: 1.9},
 
-        uLightPcColor: { value: new THREE.Color(this.colors.pc) },
-        uLightPcStrength: { value: 1.4 }
-      },
+          uLightPcColor: {value: new THREE.Color(this.colors.pc)},
+          uLightPcStrength: {value: 1.4}
+        },
       vertexShader: vertexShader,
       fragmentShader: fragmentShader
     })
@@ -89,21 +96,21 @@ export default class Baked {
         .addInput(
           this.model.material.uniforms.uNightMix,
           'value',
-          { label: 'uNightMix', min: 0, max: 1 }
+          {label: 'uNightMix', min: 0, max: 1}
         )
 
       this.debugFolder
         .addInput(
           this.model.material.uniforms.uNeutralMix,
           'value',
-          { label: 'uNeutralMix', min: 0, max: 1 }
+          {label: 'uNeutralMix', min: 0, max: 1}
         )
 
       this.debugFolder
         .addInput(
           this.colors,
           'tv',
-          { view: 'color' }
+          {view: 'color'}
         )
         .on('change', () => {
           this.model.material.uniforms.uLightTvColor.value.set(this.colors.tv)
@@ -113,14 +120,14 @@ export default class Baked {
         .addInput(
           this.model.material.uniforms.uLightTvStrength,
           'value',
-          { label: 'uLightTvStrength', min: 0, max: 3 }
+          {label: 'uLightTvStrength', min: 0, max: 3}
         )
 
       this.debugFolder
         .addInput(
           this.colors,
           'desk',
-          { view: 'color' }
+          {view: 'color'}
         )
         .on('change', () => {
           this.model.material.uniforms.uLightDeskColor.value.set(this.colors.desk)
@@ -130,14 +137,14 @@ export default class Baked {
         .addInput(
           this.model.material.uniforms.uLightDeskStrength,
           'value',
-          { label: 'uLightDeskStrength', min: 0, max: 3 }
+          {label: 'uLightDeskStrength', min: 0, max: 3}
         )
 
       this.debugFolder
         .addInput(
           this.colors,
           'pc',
-          { view: 'color' }
+          {view: 'color'}
         )
         .on('change', () => {
           this.model.material.uniforms.uLightPcColor.value.set(this.colors.pc)
@@ -147,7 +154,7 @@ export default class Baked {
         .addInput(
           this.model.material.uniforms.uLightPcStrength,
           'value',
-          { label: 'uLightPcStrength', min: 0, max: 3 }
+          {label: 'uLightPcStrength', min: 0, max: 3}
         )
     }
   }

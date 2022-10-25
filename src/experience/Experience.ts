@@ -19,7 +19,7 @@ export default class Experience {
   public time: Time;
   public sizes: Sizes;
   public config: Config;
-  public stats: Stats | undefined;
+  public stats: Stats | null;
   public scene: Scene;
   public camera: Camera;
   public renderer: Renderer;
@@ -40,8 +40,9 @@ export default class Experience {
     this.camera = new Camera();
     this.renderer = new Renderer()
     this.resources = new Resources(assets)
-    this.navigation = new Navigation()
     this.world = new World()
+    this.navigation = new Navigation()
+    console.log(Experience.instance)
 
     this.sizes.on('resize', () => {
       this.resize()
@@ -55,9 +56,9 @@ export default class Experience {
     else throw Error;
   }
 
-  public static create(options: Options) {
+  public static create(options: Options):Experience {
     if (Experience.instance) return Experience.Instance
-    else new Experience(options);
+    else return new Experience(options);
   }
 
   public destroy() {
@@ -106,9 +107,9 @@ export default class Experience {
     }
   }
 
-  private setStats() {
+  private setStats(): Stats | null {
     if (this.config.debug) return new Stats(true)
-    else null;
+    else return null;
   }
 
   private setDebug() {

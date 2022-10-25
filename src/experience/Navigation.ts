@@ -1,10 +1,10 @@
 import * as THREE from 'three'
 import normalizeWheel from 'normalize-wheel'
-import Experience from './Experience.js'
+import Experience from './Experience'
 import Camera from './Camera'
-import Config from './types/Config.js'
-import Time from './utils/Time.js'
-import View from './types/view.js'
+import Config from './types/Config'
+import Time from './utils/Time'
+import View from './types/view'
 
 export default class Navigation {
   public view: View | undefined;
@@ -76,9 +76,7 @@ export default class Navigation {
       this.view.drag.previous.y = _y
     }
 
-    this.view.up = () => {
-
-    }
+    this.view.up = () => console.warn('not implemented yet')
 
     this.view.zoomIn = (_delta) => {
       this.view.zoom.delta += _delta
