@@ -1,47 +1,86 @@
-const path = require('path');
 module.exports = {
-    parser: '@typescript-eslint/parser', // Specifies the ESLint parser
-    plugins: ['@typescript-eslint', 'react'],
-    env: {
-        browser: true,
-        jest: true,
-    },
-    extends: [
-        'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-        'prettier',
-    ],
-    parserOptions: {
-        project: path.resolve(__dirname, './tsconfig.json'),
-        tsconfigRootDir: __dirname,
-        ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-        sourceType: 'module', // Allows for the use of imports
-        ecmaFeatures: {
-            jsx: true, // Allows for the parsing of JSX
-        },
-    },
-    rules: {
-        // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
-        // e.g. "@typescript-eslint/explicit-function-return-type": "off",
-        '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-        '@typescript-eslint/ban-ts-comment': 'off',
-        // These rules don't add much value, are better covered by TypeScript and good definition files
-        'react/no-direct-mutation-state': 'off',
-        'react/no-deprecated': 'off',
-        'react/no-string-refs': 'off',
-        'react/require-render-return': 'off',
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
+  extends: [
+    'eslint:recommended',
+    'next',
+    'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+  ],
+  rules: {
+    'no-unused-vars': 'off',
+    'no-console': 'warn',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'react/no-unescaped-entities': 'off',
 
-        'react/jsx-filename-extension': [
-            'warn',
-            {
-                extensions: ['.jsx', '.tsx'],
-            },
-        ], // also want to use with ".tsx"
-        'react/prop-types': 'off', // Is this incompatible with TS props type?
-    },
-    settings: {
-        react: {
-            version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
-        },
-    },
+    'react/display-name': 'off',
+    'react/jsx-curly-brace-presence': [
+      'warn',
+      {
+        props: 'always',
+      },
+    ],
+
+    //#region  //*=========== Unused Import ===========
+    '@typescript-eslint/no-unused-vars': 'off',
+    'unused-imports/no-unused-imports': 'warn',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+      },
+    ],
+    //#endregion  //*======== Unused Import ===========
+
+    //#region  //*=========== Import Sort ===========
+    'simple-import-sort/exports': 'warn',
+    'simple-import-sort/imports': [
+      'warn',
+      {
+        groups: [
+          // ext library & side effect imports
+          ['^@?\\w', '^\\u0000'],
+          // {s}css files
+          ['^.+\\.s?css$'],
+          // Lib and hooks
+          ['^@/lib', '^@/hooks'],
+          // static data
+          ['^@/data'],
+          // components
+          ['^@/components', '^@/container'],
+          // zustand store
+          ['^@/store'],
+          // Other imports
+          ['^@/'],
+          // relative paths up until 3 level
+          [
+            '^\\./?$',
+            '^\\.(?!/?$)',
+            '^\\.\\./?$',
+            '^\\.\\.(?!/?$)',
+            '^\\.\\./\\.\\./?$',
+            '^\\.\\./\\.\\.(?!/?$)',
+            '^\\.\\./\\.\\./\\.\\./?$',
+            '^\\.\\./\\.\\./\\.\\.(?!/?$)',
+          ],
+          ['^@/types'],
+          // other that didnt fit in
+          ['^'],
+        ],
+      },
+    ],
+    //#endregion  //*======== Import Sort ===========
+  },
+  globals: {
+    React: true,
+    JSX: true,
+  },
 };

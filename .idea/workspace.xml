@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="06aeb1a2-9e05-4b33-ae0d-0cad44f0c671" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/FUNDING.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/issue-branch.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/pull_request_template.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/create-branch.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/issue-autolink.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/lint.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/release-please.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.husky/commit-msg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.husky/post-merge" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commitlint.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jest.setup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/next-sitemap.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon/site.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/inter-var-latin.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/new-tab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/og.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/Logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svg/Vercel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__mocks__/svg.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/__tests__/pages/HomePage.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/hello/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/not-found.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NextImage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Skeleton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/buttons/Button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/buttons/IconButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/buttons/TextButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/hero/brain.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/links/ArrowLink.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/links/ButtonLink.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/links/IconLink.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/links/PrimaryLink.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/links/UnderlineLink.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/links/UnstyledLink.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constant/brain.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constant/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constant/env.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/__tests__/og.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/helper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/logger.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/og.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/colors.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.importSortPrefixrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lintstagedrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/bakedDay.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/bakedNeutral.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/bakedNight.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/coffeeSteamModel.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/elgatoLightModel.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/googleHomeLedMask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/googleHomeLedsModel.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/lightMap.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/loupedeckButtonsModel.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/macScreenModel.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/pcScreenModel.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/roomModel.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/threejsJourneyLogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/topChairModel.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/videoPortfolio.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/videoStream.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/basis/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/basis/basis_transcoder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/basis/basis_transcoder.wasm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/draco/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/draco/draco_decoder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/draco/draco_decoder.wasm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/draco/draco_encoder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/draco/draco_wasm_wrapper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/draco/gltf/draco_decoder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/draco/gltf/draco_decoder.wasm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/draco/gltf/draco_encoder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/draco/gltf/draco_wasm_wrapper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/social/share-1200x630.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/@types/declarations.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hero/circles.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.module.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.module.less.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.module.scss.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/strawberry.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/Camera.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/Experience.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/Navigation.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/Renderer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/Resources.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/World.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/assets.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/shaders/baked/fragment.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/shaders/baked/vertex.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/shaders/coffeeSteam/fragment.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/shaders/coffeeSteam/vertex.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/shaders/partials/perlin2d.glsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/types/Config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/types/options.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/types/view.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/utils/Loaders.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/utils/Sizes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/utils/Stats.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/utils/Time.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/world/Baked.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/world/BouncingLogo.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/world/CoffeeSteam.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/world/ElgatoLight.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/world/GoogleLeds.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/world/LoupedeckButton.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/world/Screen.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/experience/world/TopChair.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/strawberry.component.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/abstracts/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hero/hero.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/base/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/layout/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/pages/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/vendors/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.babel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/base.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/config/alias.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/config/devServer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/config/devServierProxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/config/externals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/config/postcss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/config/sassResources.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/entry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/optimization.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/plugins/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/plugins/pluginCleanWebpack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/plugins/pluginCopy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/plugins/pluginDefine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/plugins/pluginEsLint.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/plugins/pluginForkTsChecker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/plugins/pluginHtml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/plugins/pluginMiniCssExtract.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/plugins/pluginProvide.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/prod.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/rules/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/rules/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/rules/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/rules/svg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/rules/useLoaderRuleItems.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/utils/cleanConsoleOnHMR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/utils/env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack/utils/helpers.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2TZTXFafzdi1bAfCJTcHJ75faAz" />
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "com.google.cloudcode.ide_session_index": "20230824_0000",
+    "git-widget-placeholder": "update",
+    "javascript.nodejs.core.library.configured.version": "20.5.1",
+    "javascript.nodejs.core.library.typings.version": "20.5.0",
+    "last_opened_file_path": "/home/ares/Projects/class-pins",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/home/ares/.volta/bin/node",
+    "nodejs_package_manager_path": "pnpm",
+    "prettierjs.PrettierConfiguration.Package": "/home/ares/Projects/narcissus/node_modules/prettier",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
+    "ts.external.directory.path": "/home/ares/Projects/narcissus/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.volta/bin/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06aeb1a2-9e05-4b33-ae0d-0cad44f0c671" name="Changes" comment="" />
+      <created>1691249641503</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691249641503</updated>
+      <workItem from="1691249642945" duration="3143000" />
+      <workItem from="1691257187442" duration="254000" />
+      <workItem from="1692116532374" duration="528000" />
+      <workItem from="1692117149918" duration="8976000" />
+      <workItem from="1692207163898" duration="13973000" />
+      <workItem from="1692374976688" duration="1448000" />
+      <workItem from="1692378591488" duration="3363000" />
+      <workItem from="1692388405106" duration="9872000" />
+      <workItem from="1692440372917" duration="22365000" />
+      <workItem from="1692898752934" duration="1218000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
